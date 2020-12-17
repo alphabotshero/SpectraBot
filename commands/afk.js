@@ -6,9 +6,9 @@ const fs = require('fs');
 module.exports = {
   info: {
     name: "afk",
-    description: "24/7",
-    usage: "[afk]",
-    aliases: ["24/7"],
+    description: "keeps the bot 24/7",
+    usage: "[]",
+    aliases: [""],
   },
 
   run: async function (client, message, args) {
@@ -22,7 +22,7 @@ module.exports = {
              message.channel.send({
                 embed: {
                     color: "GREEN",
-                    description: `💤  **|**  AFK is **\`${serverQueue.afk === true ? "enabled" : "disabled"}\`**`
+                    description: `24/7 mode is now **\`${serverQueue.afk === true ? "enabled" : "disabled"}\`**`
                 }
             });
             return  fs.writeFile("./afk.json", JSON.stringify(afk), (err) => {
