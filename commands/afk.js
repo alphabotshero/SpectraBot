@@ -6,9 +6,9 @@ const fs = require('fs');
 module.exports = {
   info: {
     name: "afk",
-    description: "keeps the bot 24/7",
-    usage: "[]",
-    aliases: [""],
+    description: "keeps the bot 24/7 in a Vc",
+    usage: "",
+    aliases: "",
   },
 
   run: async function (client, message, args) {

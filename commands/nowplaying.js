@@ -20,6 +20,7 @@ module.exports = {
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
       .addField("Requested by", song.req.tag, true)
+      addField("Track Url", song.url, false)
       .setFooter(`Views: ${song.views} | ${song.ago}`)
     return message.channel.send(thing)
   },

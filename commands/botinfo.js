@@ -3,7 +3,7 @@ const os = require('os')
 module.exports = {
     info: {
         name: "botinfo",
-        description: "Bot's information",
+        description: "shows the bot information.",
         usage: "",
         aliases: ["bi","stats"]
     },
@@ -49,8 +49,8 @@ module.exports = {
                     inline: true
                 },
                 {
-                    name: 'Bot Developer',
-                    value: '`Team Destiny`',
+                    name: 'Connections',
+                    value: `${client.voice.connections.size}`,
                     inline: true
                 },
                 {

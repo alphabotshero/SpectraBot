@@ -13,8 +13,8 @@ const versions = [
 module.exports = {
     info: {
         name: "docs",
-        description: "Searches the Discord.js documentation.",
-        usage: "<query> (branch)",
+        description: "",
+        usage: "",
         aliases: ["documentation", "search", "library"]
     },
 
