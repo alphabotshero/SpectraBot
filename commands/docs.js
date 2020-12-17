@@ -1,5 +1,5 @@
-const fetch = require("node-fetch"); // npm i node-fetch
-const qs = require("querystring"); // npm i querystring
+const fetch = require("node-fetch");
+const qs = require("querystring"); 
 const versions = [
   "stable",
   "master",
@@ -12,8 +12,8 @@ const versions = [
 
 module.exports = {
     info: {
-        name: "djs",
-        description: "Searches the Discord.js documentation based on the search term. Used as a developer tool.",
+        name: "docs",
+        description: "Searches the Discord.js documentation.",
         usage: "<query> (branch)",
         aliases: ["documentation", "search", "library"]
     },
@@ -21,8 +21,6 @@ module.exports = {
     run: async (client, message, args) => {
         const { channel, author } = message;
         let source = versions.includes(args.slice(-1)[0]) ? args.pop() : "stable";
-        // if (source === "11.5-dev")
-        //  source = `https://raw.githubusercontent.com/discordjs/discord.js/docs/${source}.json`;
         if(!args[0])return message.channel.send("No query sent to search")
         let q = args.join(" ");
         const queryString = qs.stringify({ src: source, q: q });
