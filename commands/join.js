@@ -1,7 +1,7 @@
 module.exports = {
     info: {
         name: "join",
-        description: "joins a vc",
+        description: "joins a voicechat",
         usage: "",
         aliases: ["summon","j"]
     },

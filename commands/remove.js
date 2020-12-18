@@ -4,8 +4,8 @@ const sendError = require("../util/error");
 module.exports = {
   info: {
     name: "remove",
-    description: "Remove song from the queue",
-    usage: "rm <number>",
+    description: "removes a song from the queue",
+    usage: "",
     aliases: ["rm"],
   },
 

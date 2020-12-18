@@ -2,10 +2,10 @@ const Discord = require('discord.js')
 const array = [ "674648258391441421", "326759637405925376" ,"749589853087203330"]
 module.exports = {
 	info: {
-	  name: "evaluvate",
-	  description: "eval code",
-	  usage: "[code]",
-	  aliases: ["eval"],
+	  name: "Evaluate",
+	  description: "evaluates the code",
+	  usage: "",
+	  aliases: ["eval"]
 	},
   
 	run: async function (client, message, args) {

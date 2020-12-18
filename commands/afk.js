@@ -8,7 +8,7 @@ module.exports = {
     name: "afk",
     description: "keeps the bot 24/7 in a Vc",
     usage: "",
-    aliases: "",
+    aliases: "stay",
   },
 
   run: async function (client, message, args) {

@@ -4,8 +4,8 @@ const sendError = require("../util/error");
 module.exports = {
   info: {
     name: "loop",
-    description: "Toggle music loop",
-    usage: "loop",
+    description: "enables/disables loop",
+    usage: "",
     aliases: ["l"],
   },
 

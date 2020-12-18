@@ -1,7 +1,7 @@
 module.exports = {
     info: {
         name: "leave",
-        description: "leaves a vc",
+        description: "leaves a voice chat",
         usage: "",
         aliases: ["l","dc","disconnect"]
     },
@@ -20,19 +20,12 @@ module.exports = {
             }
         })
 
-        if (message.guild.me.voice.channel && message.member.voice.channel.id === message.guild.me.voice.channel.id) return message.channel.send ({
-            embed: {
-                color: '#FA1D2F',
-                description: 'Iam already being used in another channel.'
-            }
-        })
-
-     message.member.voice.channel.leave();
+             message.guild.voice.channel.leave()
 
         message.channel.send ({
             embed: {
                 color: '#DE8DF3',
-                description: `Left **__${message.member.voice.channel.name}__** channel.`
+                description: `Left **${message.member.voice.channel.name}** channel.`
             }
         })
     },

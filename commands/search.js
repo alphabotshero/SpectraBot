@@ -9,7 +9,7 @@ const fs = require('fs');
 module.exports = {
   info: {
     name: "search",
-    description: "To search songs :D",
+    description: "searches a song",
     usage: "<song_name>",
     aliases: ["sc"],
   },
@@ -62,7 +62,7 @@ module.exports = {
                     return message.channel.send({
                         embed: {
                             color: "RED",
-                            description: "🆘  **|**  I could not obtain any search results"
+                            description: "Iam unable to find results for the query"
                         }
                     });
                 }
@@ -84,7 +84,7 @@ module.exports = {
     if (serverQueue) {
       serverQueue.songs.push(song);
       let thing = new MessageEmbed()
-      .setAuthor("Song has been added to queue", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
+      .setAuthor("Song has been added to queue")
       .setThumbnail(song.img)
       .setColor("YELLOW")
       .addField("Name", song.title, true)
@@ -150,11 +150,12 @@ stream.on('error', function(er)  {
 
       dispatcher.setVolumeLogarithmic(queue.volume / 100);
       let thing = new MessageEmbed()
-      .setAuthor("Started Playing Music!", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
+      .setAuthor("Started Playing the Track")
       .setThumbnail(song.img)
       .setColor("BLUE")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
+      .addField("Song URL", song.url, true)
       .addField("Requested by", song.req.tag, true)
       .setFooter(`Views: ${song.views} | ${song.ago}`)
       queue.textChannel.send(thing);

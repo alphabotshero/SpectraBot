@@ -5,8 +5,8 @@ const sendError = require("../util/error");
 module.exports = {
   info: {
     name: "lyrics",
-    description: "Get lyrics for the currently playing song",
-    usage: "[lyrics]",
+    description: "displays the current song lyrics",
+    usage: "",
     aliases: ["ly"],
   },
 

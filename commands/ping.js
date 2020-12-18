@@ -5,7 +5,7 @@ const sendError = require("../util/error")
 module.exports = {
   info: {
     name: "ping",
-    description: "shows the bots ping",
+    description: "displays bots latency",
     usage: "",
     aliases: [""],
   },

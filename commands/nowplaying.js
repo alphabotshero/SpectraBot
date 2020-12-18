@@ -17,11 +17,13 @@ module.exports = {
       .setAuthor("Now Playing")
       .setThumbnail(song.img)
       .setColor("BLUE")
-      .addField("Name", song.title, true)
+      .addField("Channel",song.author ,true)
+      .addField("Requested by", song.req.username, true)
+      .addField("Views", song.views, true)
       .addField("Duration", song.duration, true)
-      .addField("Requested by", song.req.tag, true)
-      addField("Track Url", song.url, false)
-      .setFooter(`Views: ${song.views} | ${song.ago}`)
+      .addField("Released", song.ago, true)
+      .addField("Name", song.url, true)
+      .setFooter(`Requested by ${song.req.username}`)
     return message.channel.send(thing)
   },
 };

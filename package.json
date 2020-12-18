@@ -25,7 +25,7 @@
     "querystring": "^0.2.0",
     "youtube-sr": "^2.0.1",
     "yt-search": "^2.2.4",
-    "ytdl-core": "^4.1.7",
+    "ytdl-core": "^4.2.0",
     "ytdl-core-discord": "^1.2.4",
     "ytpl": "^2.0.0-alpha.3"
   }

@@ -3,7 +3,7 @@ const array = [ "683343114865606686", "783559957147549716" ,"674648258391441421"
 module.exports = {
     info: {
       name: "serverlist",
-      description: "svl",
+      description: "displays the serverlist.",
       usage: "",
       aliases: ["svl"],
     },

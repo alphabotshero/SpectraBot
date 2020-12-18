@@ -12,8 +12,8 @@ const fs = require('fs');
 module.exports = {
 	info: {
 		name: "playlist",
-		description: "To play songs :D",
-		usage: "<YouTube Playlist URL | Playlist Name>",
+		description: "plays playlists from youtube",
+		usage: "",
 		aliases: ["pl"],
 	},
 

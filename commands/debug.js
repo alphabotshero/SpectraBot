@@ -1,7 +1,7 @@
 module.exports = {
     info: {
         name: "debug",
-        description: "",
+        description: "shows the",
         usage: "",
         aliases: ["db"]
     },

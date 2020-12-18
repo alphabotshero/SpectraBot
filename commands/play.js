@@ -8,8 +8,8 @@ const sendError = require("../util/error")
 module.exports = {
   info: {
     name: "play",
-    description: "To play songs :D",
-    usage: "<YouTube_URL> | <song_name>",
+    description: "plays a song",
+    usage: "",
     aliases: ["p"],
   },
 
