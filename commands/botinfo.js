@@ -12,7 +12,7 @@ module.exports = {
             .setThumbnail(client.user.displayAvatarURL())
             .setTitle('Bot Stats')
             .setColor('#00ffff')
-            .addField("Bot Version",`0.3` ,true)
+            .addField("Bot Version",`3.0.0` ,true)
             .addField("Node.js Version",`12.3.1` ,true)
             .addField("Discord.js Version",`3.0.0` ,true)
             .addField("Servers",`${client.guilds.cache.size}` ,true)
