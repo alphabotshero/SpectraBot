@@ -10,7 +10,7 @@ module.exports = {
   info: {
     name: "search",
     description: "searches a song",
-    usage: "<song_name>",
+    usage: "",
     aliases: ["sc"],
   },
 
@@ -31,7 +31,7 @@ module.exports = {
           if (searched[0] == undefined)return sendError("Looks like i was unable to find the song on YouTube", message.channel);
                     let index = 0;
                     let embedPlay = new MessageEmbed()
-                        .setColor("BLUE")
+                        .setColor("#2C2F33")
                         .setAuthor(`Results for \"${args.join(" ")}\"`, message.author.displayAvatarURL())
                         .setDescription(`${searched.map(video2 => `**\`${++index}\`  |** [\`${video2.title}\`](${video2.url}) - \`${video2.durationFormatted}\``).join("\n")}`)
                         .setFooter("Type the number of the song to add it to the playlist");
@@ -86,7 +86,7 @@ module.exports = {
       let thing = new MessageEmbed()
       .setAuthor("Song has been added to queue")
       .setThumbnail(song.img)
-      .setColor("YELLOW")
+      .setColor("#2C2F33")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
       .addField("Requested by", song.req.tag, true)
@@ -115,7 +115,7 @@ module.exports = {
     var online = afk[message.guild.id]
     if (!song){
       if (!online.afk) {
-        sendError("Leaving the voice channel because I think there are no songs in the queue. If you like the bot stay 24/7 in voice channel run `!afk`\n\nThank you for using my code! [GitHub](https://github.com/SudhanPlayz/Discord-MusicBot)", message.channel)
+        sendError("Leaving the voice channel because I think there are no songs in the queue.", message.channel)
         message.guild.me.voice.channel.leave();//If you want your bot stay in vc 24/7 remove this line :D
         message.client.queue.delete(message.guild.id);
       }
@@ -152,7 +152,7 @@ stream.on('error', function(er)  {
       let thing = new MessageEmbed()
       .setAuthor("Started Playing the Track")
       .setThumbnail(song.img)
-      .setColor("BLUE")
+      .setColor("#2C2F33")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
       .addField("Song URL", song.url, true)

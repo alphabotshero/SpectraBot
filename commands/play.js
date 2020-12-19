@@ -75,7 +75,7 @@ module.exports = {
       let thing = new MessageEmbed()
       .setAuthor("Song has been added to queue")
       .setThumbnail(song.img)
-      .setColor("YELLOW")
+      .setColor("#2C2F33")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
       .addField("Requested by", song.req.tag, true)
@@ -88,7 +88,7 @@ module.exports = {
       voiceChannel: channel,
       connection: null,
       songs: [],
-      volume: 80,
+      volume: 100,
       playing: true,
       loop: false
     };
@@ -140,7 +140,7 @@ stream.on('error', function(er)  {
       let thing = new MessageEmbed()
       .setAuthor("Started Playing Music!")
       .setThumbnail(song.img)
-      .setColor("BLUE")
+      .setColor("#2C2F33")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
       .addField("Requested by", song.req.tag, true)

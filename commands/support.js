@@ -9,10 +9,9 @@ module.exports = {
   },
 
   run: async function (client, message, args) {
-    let bgm = `[**Click here**](https://discord.gg/VcEDyuh)`;
     let omg = new MessageEmbed()
-      .setColor("RANDOM")
-      .addField("Link to my support server", bgm , true)
+      .setColor("#2C2F33")
+      .setDescription(`Join my support server by clicking [here](https://discord.gg/VcEDyuh)`)
     return message.channel.send(omg)
   },
 };

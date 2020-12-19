@@ -17,7 +17,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setThumbnail(client.user.displayAvatarURL())
             .setTitle('Bot Stats')
-            .setColor('#00ffff')
+            .setColor('#2C2F33')
           
             .addField('General', [
                 `**❯ Client :** ${client.user.tag}`,

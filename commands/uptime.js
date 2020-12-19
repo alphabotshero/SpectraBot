@@ -20,8 +20,8 @@ module.exports = {
     let seconds = Math.floor(totalSeconds % 60);
     let uptime = `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
     let lmao = new MessageEmbed()
-      .setColor("RANDOM")
-      .addField("Bots uptime", uptime, true)
+      .setColor("#2C2F33")
+      .setDescription( `${uptime}`)
     return message.channel.send(lmao)
   },
 };

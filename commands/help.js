@@ -13,14 +13,14 @@ module.exports = {
 
         client.commands.forEach(cmd => {
             let cmdinfo = cmd.info
-            allcmds+="``"+client.config.prefix+cmdinfo.name+" "+cmdinfo.usage+"`` ~ "+cmdinfo.description+"\n"
+            allcmds+="``"+client.config.prefix+cmdinfo.name+" "+cmdinfo.usage+"`` - "+cmdinfo.description+"\n"
         })
 
         let embed = new MessageEmbed()
         .setAuthor("Commands of "+client.user.username)
-        .setColor("RANDOM")
+        .setColor("#2C2F33")
         .setDescription(allcmds)
-        .setFooter(`To get info of each command you can do ${client.config.prefix}help [command]`)
+        .setFooter(`To get info on each command use ${client.config.prefix}help [command]`)
 
         if(!args[0])return message.channel.send(embed)
         else {
@@ -30,7 +30,7 @@ module.exports = {
             if(!command)return message.channel.send("Unknown Command")
             let commandinfo = new MessageEmbed()
             .setTitle("Command: "+command.info.name+" info")
-            .setColor("RANDOM")
+            .setColor("#2C2F33")
             .setDescription(`
 Name: ${command.info.name}
 Description: ${command.info.description}

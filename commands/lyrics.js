@@ -26,7 +26,7 @@ module.exports = {
     let lyricsEmbed = new MessageEmbed()
       .setAuthor(`${queue.songs[0].title} — Lyrics`)
       .setThumbnail(queue.songs[0].img)
-      .setColor("RANDOM")
+      .setColor("#2C2F33")
       .setDescription(lyrics)
       .setTimestamp();
 

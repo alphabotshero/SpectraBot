@@ -79,7 +79,7 @@ function generateQueueEmbed(message, queue) {
     const embed = new MessageEmbed()
      .setAuthor("Server Songs Queue")
     .setThumbnail(message.guild.iconURL())
-    .setColor("BLUE")
+    .setColor("#2C2F33")
     .setDescription(`${info}`)
     .addField("Now Playing", `[${queue[0].title}](${queue[0].url})`, true)
     .addField("Text Channel", serverQueue.textChannel, true)

@@ -21,7 +21,7 @@ module.exports = {
             serverQueue.afk = !serverQueue.afk;
              message.channel.send({
                 embed: {
-                    color: "GREEN",
+                    color: "#2C2F33",
                     description: `24/7 mode is now **\`${serverQueue.afk === true ? "enabled" : "disabled"}\`**`
                 }
             });

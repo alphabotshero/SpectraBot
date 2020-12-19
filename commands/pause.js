@@ -21,7 +21,7 @@ module.exports = {
       }        
       let xd = new MessageEmbed()
       .setDescription("Player has been **__paused__**")
-      .setColor("RANDOM")
+      .setColor("#2C2F33")
       return message.channel.send(xd);
     }
     return sendError("There is nothing playing in this server.", message.channel);

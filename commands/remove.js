@@ -19,10 +19,10 @@ module.exports = {
       return sendError(`The queue is only ${queue.songs.length} songs long!`,message.channel).catch(console.error);
 try{
     const song = queue.songs.splice(args[0] - 1, 1); 
-    sendError(`❌ **|** Removed: **\`${song[0].title}\`** from the queue.`,queue.textChannel).catch(console.error);
+    sendError(`Removed: **\`${song[0].title}\`** from the queue.`,queue.textChannel).catch(console.error);
                    message.react("✅")
 } catch (error) {
-        return sendError(`:notes: An unexpected error occurred.\nPossible type: ${error}`, message.channel);
+        return sendError(`An unexpected error occurred.\nPossible type: ${error}`, message.channel);
       }
   },
 };

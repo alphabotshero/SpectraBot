@@ -16,7 +16,7 @@ module.exports = {
 	if(array.includes(message.author.id)){
 	if(!command) return message.channel.send ({
 		embed: {
-			color: 'RANDOM',
+			color: '#2C2F33',
 			description: 'Shutup i wont tell you my token.'
 		}
 	})

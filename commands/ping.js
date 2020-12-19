@@ -11,10 +11,9 @@ module.exports = {
   },
 
   run: async function (client, message, args) {
-    let ping = `**${client.ws.ping}** ms`;
-    let omg = new MessageEmbed()
-      .setColor("RANDOM")
-      .addField("Server Latency is", ping , true)
+       let omg = new MessageEmbed()
+      .setColor("#2C2F33")
+      .setDescription(`:ping_pong: Server Latency is, **__${client.ws.ping}__**ms!` , true)
     return message.channel.send(omg)
   },
 };

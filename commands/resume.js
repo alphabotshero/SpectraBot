@@ -15,8 +15,8 @@ module.exports = {
       serverQueue.playing = true;
       serverQueue.connection.dispatcher.resume();
       let xd = new MessageEmbed()
-      .setDescription(" Resumed the music for you!")
-      .setColor("RANDOM")
+      .setDescription("Resuming the player.")
+      .setColor("#2C2F33")
       .setAuthor("Player has been **__resumed__**")
       return message.channel.send(xd);
     }
