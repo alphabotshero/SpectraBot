@@ -3,6 +3,7 @@ const os = require('os')
 const ms = require('ms')
 const { utc } = require('moment');
 const { version } = require('../package.json');
+const { discord } = require('../package.json') 
 const core = os.cpus()[0];
 module.exports = {
     info: {
@@ -12,15 +13,6 @@ module.exports = {
         aliases: ["bi","stats"]
     },
     run: async (client, message, args) => {
-        
-        let totalSeconds = (client.uptime / 1000);
-        let days = Math.floor(totalSeconds / 86400);
-        totalSeconds %= 86400;
-        let hours = Math.floor(totalSeconds / 3600);
-        totalSeconds %= 3600;
-        let minutes = Math.floor(totalSeconds / 60);
-        let seconds = Math.floor(totalSeconds % 60);
-        let omg = `${days} d, ${hours} h, ${minutes} m and ${seconds} s`;
 
         const embed = new MessageEmbed()
             .setThumbnail(client.user.displayAvatarURL())

@@ -5,7 +5,7 @@ module.exports = {
 	  name: "Evaluate",
 	  description: "evaluates the code",
 	  usage: "",
-	  aliases: ["eval"]
+	  aliases: ["eval", "jsk"]
 	},
   
 	run: async function (client, message, args) {
