@@ -4,7 +4,7 @@ const sendError = require("../util/error");
 module.exports = {
   info: {
     name: "queue",
-    description: "displays the current queue",
+    description: "Displays the current queue.",
     usage: "",
     aliases: ["q", "list", "songlist", "song-list"],
   },

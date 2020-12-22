@@ -1,7 +1,7 @@
 module.exports = {
     info: {
         name: "leave",
-        description: "leaves a voice chat",
+        description: "Leaves a voice chat.",
         usage: "",
         aliases: ["l","dc","disconnect"]
     },
@@ -25,7 +25,7 @@ module.exports = {
         message.channel.send ({
             embed: {
                 color: '#2C2F33',
-                description: `Left **${message.member.voice.channel.name}** channel.Use __,join__ to summon again.`
+                description: `Left **${message.member.voice.channel.name}** channel.Use __s!join__ to summon again.`
             }
         })
     },

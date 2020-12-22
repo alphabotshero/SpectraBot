@@ -4,7 +4,7 @@ const sendError = require("../util/error")
 module.exports = {
   info: {
     name: "nowplaying",
-    description: "To show the music which is currently playing in this server",
+    description: "Displays the current track information.",
     usage: "",
     aliases: ["np"],
   },

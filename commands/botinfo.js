@@ -8,7 +8,7 @@ const core = os.cpus()[0];
 module.exports = {
     info: {
         name: "botinfo",
-        description: "shows the bot information.",
+        description: "Displays the bot information.",
         usage: "",
         aliases: ["bi","stats"]
     },

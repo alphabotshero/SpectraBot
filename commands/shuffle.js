@@ -4,7 +4,7 @@ const sendError = require("../util/error");
 module.exports = {
   info: {
     name: "shuffle",
-    description: "Shuffle's queue",
+    description: "Shuffle's the queue.",
     usage: "",
     aliases: ["shuffle"],
   },

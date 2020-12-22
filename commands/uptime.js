@@ -5,7 +5,7 @@ const sendError = require("../util/error")
 module.exports = {
   info: {
     name: "uptime",
-    description: "shows the bots uptime",
+    description: "shows the bots uptime.",
     usage: "",
     aliases: ["up"],
   },

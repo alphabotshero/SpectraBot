@@ -4,9 +4,9 @@ const sendError = require("../util/error");
 module.exports = {
   info: {
     name: "loop",
-    description: "enables/disables loop",
+    description: "Enables/Disables the loop.",
     usage: "",
-    aliases: ["l"],
+    aliases: ["lp"],
   },
 
   run: async function (client, message, args) {

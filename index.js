@@ -29,7 +29,7 @@ fs.readdir("./commands/", (err, files) => {
     let props = require(`./commands/${file}`);
     let commandName = file.split(".")[0];
     client.commands.set(commandName, props);
-    console.log("Loading Command: "+commandName)
+    console.log("Deployed: "+commandName)
   });
 });
 

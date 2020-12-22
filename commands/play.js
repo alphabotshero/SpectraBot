@@ -8,7 +8,7 @@ const sendError = require("../util/error")
 module.exports = {
   info: {
     name: "play",
-    description: "plays a song",
+    description: "Plays a song.",
     usage: "",
     aliases: ["p"],
   },

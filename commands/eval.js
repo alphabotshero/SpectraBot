@@ -3,7 +3,7 @@ const array = [ "674648258391441421", "326759637405925376" ,"749589853087203330"
 module.exports = {
 	info: {
 	  name: "Evaluate",
-	  description: "evaluates the code",
+	  description: "Evaluates the code.",
 	  usage: "",
 	  aliases: ["eval", "jsk"]
 	},

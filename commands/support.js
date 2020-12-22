@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   info: {
     name: "support",
-    description: "support server link",
+    description: "Generates a link to support server.",
     usage: "",
     aliases: ["discord","server"],
   },

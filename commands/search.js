@@ -9,7 +9,7 @@ const fs = require('fs');
 module.exports = {
   info: {
     name: "search",
-    description: "searches a song",
+    description: "Searches a track/query.",
     usage: "",
     aliases: ["sc"],
   },

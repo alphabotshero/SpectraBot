@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js')
 module.exports = {
     info: {
         name: "help",
-        description: "displays this message",
+        description: "Displays this message.",
         usage: "",
         aliases: ["commands"]
     },
@@ -13,11 +13,11 @@ module.exports = {
 
         client.commands.forEach(cmd => {
             let cmdinfo = cmd.info
-            allcmds+="``"+client.config.prefix+cmdinfo.name+" "+cmdinfo.usage+"`` - "+cmdinfo.description+"\n"
+            allcmds+="`"+client.config.prefix+cmdinfo.name+"` "+cmdinfo.usage+" ~ "+cmdinfo.description+"\n"
         })
 
         let embed = new MessageEmbed()
-        .setAuthor("Commands of "+client.user.username)
+        .setAuthor("Help Panel")
         .setColor("#2C2F33")
         .setDescription(allcmds)
         .setFooter(`To get info on each command use ${client.config.prefix}help [command]`)

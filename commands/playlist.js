@@ -12,7 +12,7 @@ const fs = require('fs');
 module.exports = {
 	info: {
 		name: "playlist",
-		description: "plays playlists from youtube",
+		description: "Plays playlists from youtube.",
 		usage: "",
 		aliases: ["pl"],
 	},
