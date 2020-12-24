@@ -16,13 +16,13 @@ module.exports = {
     let thing = new MessageEmbed()
       .setAuthor("Now Playing")
       .setThumbnail(song.img)
-      .setColor("#2C2F33")
+      .setColor("#58b9ff")
+      .addField("Name", song.title, false) 
       .addField("Requested by", song.req.username, true)
       .addField("Views", song.views, true)
       .addField("Duration", song.duration, true)
       .addField("Released", song.ago, true)
-      .addField("Name", song.url, true)
-      .setFooter(`Requested by ${song.req.username}`)
+      .addField("URL", song.url, false)
     return message.channel.send(thing)
   },
 };

@@ -20,7 +20,7 @@ module.exports = {
     let seconds = Math.floor(totalSeconds % 60);
     let uptime = `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
     let lmao = new MessageEmbed()
-      .setColor("#2C2F33")
+      .setColor("#58b9ff")
       .setDescription( `${uptime}`)
     return message.channel.send(lmao)
   },

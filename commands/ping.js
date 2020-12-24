@@ -12,7 +12,7 @@ module.exports = {
 
   run: async function (client, message, args) {
        let omg = new MessageEmbed()
-      .setColor("#2C2F33")
+      .setColor("#58b9ff")
       .setDescription(`<a:pandaping:788652556732596224> Server Latency is, **__${client.ws.ping}__** ms!` , true)
     return message.channel.send(omg)
   },

@@ -16,12 +16,13 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setThumbnail(client.user.displayAvatarURL())
-            .setTitle('Bot Stats')
-            .setColor('#2C2F33')
+            .setTitle('Spectra')
+            .setColor('#58b9ff')
           
             .addField('General', [
-                `**❯ Client :** ${client.user.tag}`,
-                `**❯ Client id:** ${client.user.id}`,
+                `**❯ Username :** ${client.user.tag}`,
+                `**❯ User id:** ${client.user.id}`,
+                `**❯ Author:** Krishna, Avi`,
                 `**❯ Commands:** 27`,
             ])
 
@@ -43,7 +44,7 @@ module.exports = {
                 `\u3000 Model: ${core.model}`,
                 `\u3000 Speed: ${core.speed}MHz`,
             ])
-            .setFooter(`Created By ${message.author.tag}`, message.author.displayAvatarURL())
+            .setFooter(`Requested By ${message.author.tag}`, message.author.displayAvatarURL())
         await message.channel.send(embed)
     }
 }

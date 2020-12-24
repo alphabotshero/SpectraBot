@@ -16,8 +16,7 @@ module.exports = {
       serverQueue.connection.dispatcher.resume();
       let xd = new MessageEmbed()
       .setDescription("Resuming the player.")
-      .setColor("#2C2F33")
-      .setAuthor("Player has been **__resumed__**")
+      .setColor("#58b9ff")
       return message.channel.send(xd);
     }
     return sendError("There is nothing playing in this server.", message.channel);

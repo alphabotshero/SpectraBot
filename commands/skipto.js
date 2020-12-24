@@ -39,13 +39,13 @@ module.exports = {
       }catch (error) {
         queue.voiceChannel.leave()
         message.client.queue.delete(message.guild.id);
-       return sendError(`:notes: The player has stopped and the queue has been cleared.: ${error}`, message.channel);
+       return sendError(`The player has stopped and the queue has been cleared.: ${error}`, message.channel);
       }
     
     queue.textChannel.send({
                         embed: {
                             color: "#2C2F33",
-                            description: `${message.author} ⏭ skipped \`${args[0] - 1}\` songs`
+                            description: `${message.author} skipping \`${args[0] - 1}\` songs`
                         }
    
                    }).catch(console.error);

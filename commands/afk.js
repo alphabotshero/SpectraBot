@@ -12,16 +12,25 @@ module.exports = {
   },
 
   run: async function (client, message, args) {
+    if (!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send ({
+      embed: {
+        color: 'RED',
+        description: 'you donot have permission to use this command.'
+
+      }
+    })
+    
     let afk = JSON.parse(fs.readFileSync("./afk.json", "utf8"));
        if (!afk[message.guild.id]) afk[message.guild.id] = {
         afk: false,
     };
     var serverQueue = afk[message.guild.id]
+    
        if (serverQueue) {
             serverQueue.afk = !serverQueue.afk;
              message.channel.send({
                 embed: {
-                    color: "#2C2F33",
+                    color: "#58b9ff",
                     description: `24/7 mode is now **\`${serverQueue.afk === true ? "enabled" : "disabled"}\`**`
                 }
             });

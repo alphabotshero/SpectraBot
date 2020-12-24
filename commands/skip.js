@@ -6,14 +6,14 @@ module.exports = {
     name: "skip",
     description: "Skips the current track.",
     usage: "",
-    aliases: ["s"],
+    aliases: ["sk"],
   },
 
   run: async function (client, message, args) {
     const channel = message.member.voice.channel
-    if (!channel)return sendError("I'm sorry but you need to be in a voice channel to play music!", message.channel);
+    if (!channel)return sendError("You have to be connected to a voice channel before you can use this command.", message.channel);
     const serverQueue = message.client.queue.get(message.guild.id);
-    if (!serverQueue)return sendError("There is nothing playing that I could skip for you.", message.channel);
+    if (!serverQueue)return sendError("There are no Songs in the Queue.", message.channel);
         if(!serverQueue.connection)return
 if(!serverQueue.connection.dispatcher)return
      if (serverQueue && !serverQueue.playing) {
@@ -21,7 +21,7 @@ if(!serverQueue.connection.dispatcher)return
       serverQueue.connection.dispatcher.resume();
       let xd = new MessageEmbed()
       .setDescription("Resumed the music for you!")
-      .setColor("#2C2F33")
+      .setColor("#58b9ff")
       .setTitle("Music has been Resumed!")
        
    return message.channel.send(xd).catch(err => console.log(err));
@@ -36,6 +36,6 @@ if(!serverQueue.connection.dispatcher)return
         message.client.queue.delete(message.guild.id);
         return sendError(`The player has stopped and the queue has been cleared.: ${error}`, message.channel);
       }
-    message.react("✅")
+    message.react("")
   },
 };

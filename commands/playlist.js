@@ -38,7 +38,7 @@ module.exports = {
 				}
 				return message.channel.send({
 					embed: {
-						color: "#2C2F33",
+						color: "#58b9ff",
 						description: `Playlist: **\`${videos[0].title}\`** has been added to the queue`
 					}
 				})
@@ -60,9 +60,9 @@ module.exports = {
 					await handleVideo(video, message, channel, true); // eslint-disable-line no-await-in-loop
 				}
 				let thing = new MessageEmbed()
-					.setAuthor("Playlist has been added to queue", "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/Music.gif")
+					.setAuthor("Playlist has been added to queue")
 					.setThumbnail(songInfo.thumbnail)
-					.setColor("#2C2F33")
+					.setColor("#58b9ff")
 					.setDescription(`Playlist: **\`${songInfo.title}\`** has been added \`${songInfo.videoCount}\` video to the queue`)
 				return message.channel.send(thing)
 			} catch (error) {
@@ -88,7 +88,7 @@ module.exports = {
 					voiceChannel: channel,
 					connection: null,
 					songs: [],
-					volume: 80,
+					volume: 60,
 					playing: true,
 					loop: false
 				};
@@ -130,7 +130,7 @@ async	function play(guild, song) {
     var online = afk[message.guild.id]
     if (!song){
       if (!online.afk) {
-        sendError("Leaving the voice channel because I think there are no songs in the queue. If you like the bot stay 24/7 in voice channel run `!afk`\n\nThank you for using my code! [GitHub](https://github.com/SudhanPlayz/Discord-MusicBot)", message.channel)
+        sendError("Leaving the voice channel because I think there are no songs in the queue.", message.channel)
         message.guild.me.voice.channel.leave();//If you want your bot stay in vc 24/7 remove this line :D
         message.client.queue.delete(message.guild.id);
       }

@@ -24,7 +24,7 @@ module.exports = {
     if(parseInt(args[0]) > 200 ||(args[0]) < 0) return sendError('PLayer can\'t exceed the volume more than 200 or less than 0',message.channel).catch(err => console.log(err));
     serverQueue.volume = args[0]; 
     serverQueue.connection.dispatcher.setVolumeLogarithmic(args[0] / 100);
-    if(!parseInt(args[0]))return //args[0] is not a number 
+    if(!parseInt(args[0]))return  
     let xd = new MessageEmbed()
     .setDescription(`Volume has been adjusted to **__${args[0]/1}%__**`)
     .setColor("#2C2F33")

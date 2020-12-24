@@ -11,13 +11,18 @@ module.exports = {
 	run: async function (client, message, args) {
 	let command = args.slice(0).join(" ")
 	if (command.includes(`SECRET`) || command.includes(`TOKEN`) || command.includes(`token`) || command.includes("process.env")) {
-		return message.channel.send('Sorry buddy you cant get my token information.') 
+		return message.channel.send ({
+			embed: {
+				color: '#58b9ff',
+				description: 'Sorry! you dont have perms to view my token information.'
+			}
+		})
 	  } else{
 	if(array.includes(message.author.id)){
 	if(!command) return message.channel.send ({
 		embed: {
-			color: '#2C2F33',
-			description: 'Shutup i wont tell you my token.'
+			color: '#58b9ff',
+			description: 'what do you need to evaluate?'
 		}
 	})
 
@@ -25,16 +30,17 @@ module.exports = {
 		let evaled = eval(command)
 		if(message.author.id === '749589853087203330'){
 		var embed = new Discord.MessageEmbed()
-		.setTitle("Evaluated")
-		.addField("To Eval", `\`\`\`${command}\`\`\``)
-		.addField("Evaled", `\`\`\`js\n${evaled}\`\`\``)  
-		.addField("Type Of", `\`\`\`${typeof(evaled)}\`\`\``)
+		.setColor("#58b9ff")
+		.addField("String", `\`\`\`${command}\`\`\``)
+		.addField("Response", `\`\`\`js\n${evaled}\`\`\``)  
+		.addField("Type", `\`\`\`${typeof(evaled)}\`\`\``)
 		message.channel.send(embed)
 		}else {
 			message.channel.send(`\`\`\`js\n${evaled}\`\`\``)
 		} 
 	} catch  (error) {
 		var embed = new Discord.MessageEmbed()
+		.setColor("RED")
 		.addField("Error", `${error}`)
 
 		message.channel.send(embed)
@@ -42,7 +48,7 @@ module.exports = {
  } else {
 	message.channel.send ({
 		embed: {
-			color: '#ff0000',
+			color: 'RED',
 			description: 'you are not allowed to use this command.'
 		}
 	})

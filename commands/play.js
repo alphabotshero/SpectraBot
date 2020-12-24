@@ -51,7 +51,7 @@ module.exports = {
     }else {
       try {
         var searched = await yts.search(searchString);
-    if(searched.videos.length === 0)return sendError("Looks like i was unable to find the song on YouTube", message.channel)
+    if(searched.videos.length === 0)return sendError("Looks like i was unable to find the song", message.channel)
     
      songInfo = searched.videos[0]
         song = {
@@ -75,7 +75,7 @@ module.exports = {
       let thing = new MessageEmbed()
       .setAuthor("Song has been added to queue")
       .setThumbnail(song.img)
-      .setColor("#2C2F33")
+      .setColor("#58b9ff")
       .addField("Name", song.title, true)
       .addField("Duration", song.duration, true)
       .addField("Requested by", song.req.tag, true)
@@ -88,7 +88,7 @@ module.exports = {
       voiceChannel: channel,
       connection: null,
       songs: [],
-      volume: 100,
+      volume: 60,
       playing: true,
       loop: false
     };
@@ -138,13 +138,9 @@ stream.on('error', function(er)  {
 
       dispatcher.setVolumeLogarithmic(queue.volume / 100);
       let thing = new MessageEmbed()
-      .setAuthor("Started Playing Music!")
-      .setThumbnail(song.img)
-      .setColor("#2C2F33")
-      .addField("Name", song.title, true)
-      .addField("Duration", song.duration, true)
-      .addField("Requested by", song.req.tag, true)
-      .setFooter(`Views: ${song.views} | ${song.ago}`)
+      .setColor("#58b9ff")
+      .setAuthor("Now Playing")
+      .setDescription(song.title)
       queue.textChannel.send(thing);
     };
 

@@ -1,3 +1,4 @@
+const { MessageEmbed } = require("discord.js");
 module.exports = {
     info: {
         name: "invite",
@@ -7,11 +8,13 @@ module.exports = {
     },
 
     run: async (client, message, args) => {
-        message.channel.send({
-            embed: {
-                color: '#2C2F33',
-                description: `[**click here to invite me**](https://discord.com/api/oauth2/authorize?client_id=777772866417983508&permissions=36785216&scope=bot)`,
-            },
-        });
+        let embed = new MessageEmbed()
+        .setThumbnail(`${client.user.displayAvatarURL()}`)
+        .setColor("#58b9ff")
+        .setDescription(`**[CLICK HERE TO INVITE THIS BOT TO YOUR SERVER](https://discord.com/oauth2/authorize?client_id=777772866417983508&permissions=37088320&scope=bot)**`)
+        .setAuthor('Invite The Bot To Your Server, For Its Betterment')
+        .addField('Query?',[`Click here to join my support [server](https://discord.gg/VcEDyuh)`])
+        .setFooter(`©️ By Glob Development | author: Krishna`, `https://cdn.discordapp.com/avatars/777772866417983508/5bf111dc844bde4ba393e6fe94d7059e.webp?size=1024`)
+        return message.channel.send(embed)
     },
 };

@@ -14,10 +14,10 @@ module.exports = {
             client.guilds.cache.forEach((guild) => {
                 reply += `\`\`\`\nGuild Name = ${guild.name}, Guild members = ${guild.members.cache.size}\`\`\`` })
                 const embed = new Discord.MessageEmbed()
-                .setColor("#2C2F33")
+                .setColor("GREEN")
                 embed.setDescription(reply)
                 message.channel.send(embed)
             }
-    else{message.reply('Sorry buddy you cant use this command.')}
+    else{message.reply('You donot have permission to use this command :/')}
     }
 }
