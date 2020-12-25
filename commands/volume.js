@@ -5,7 +5,7 @@ module.exports = {
   info: {
     name: "volume",
     description: "Adjusts the volume.",
-    usage: "",
+    usage: "s!volume 30",
     aliases: ["v","vol"],
   },
 

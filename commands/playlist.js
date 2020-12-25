@@ -13,7 +13,7 @@ module.exports = {
 	info: {
 		name: "playlist",
 		description: "Plays playlists from youtube.",
-		usage: "",
+		usage: "s!playlist <link>",
 		aliases: ["pl"],
 	},
 

@@ -4,7 +4,7 @@ module.exports = {
     info: {
         name: "debug",
         description: "Displays the bot's connections.",
-        usage: "",
+        usage: "s!debug",
         aliases: ["db"]
     },
 

@@ -14,7 +14,7 @@ module.exports = {
     info: {
         name: "docs",
         description: "Discord.js documentation.",
-        usage: "",
+        usage: "s!docs client",
         aliases: ["documentation", "search", "library"]
     },
 

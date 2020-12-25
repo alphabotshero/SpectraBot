@@ -5,7 +5,7 @@ module.exports = {
   info: {
     name: "remove",
     description: "Removes a track from the queue.",
-    usage: "",
+    usage: "s!remove <number>",
     aliases: ["rm"],
   },
 

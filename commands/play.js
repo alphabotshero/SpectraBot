@@ -9,7 +9,7 @@ module.exports = {
   info: {
     name: "play",
     description: "Plays a song.",
-    usage: "",
+    usage: "s!play <song>",
     aliases: ["p"],
   },
 

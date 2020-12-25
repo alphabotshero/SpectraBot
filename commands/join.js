@@ -2,7 +2,7 @@ module.exports = {
     info: {
         name: "join",
         description: "Joins a voicechat.",
-        usage: "",
+        usage: "s!join",
         aliases: ["summon","j"]
     },
 
@@ -33,7 +33,7 @@ module.exports = {
         message.channel.send ({
             embed: {
                 color: '#58b9ff',
-                description: `joined **__${message.member.voice.channel.name}__** channel.Use s!play to play a song.`
+                description: `joined **__${message.member.voice.channel.name}__** channel. Use s!play to play a song.`
             }
         })
     },

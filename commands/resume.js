@@ -5,8 +5,8 @@ module.exports = {
   info: {
     name: "resume",
     description: "Resumes the player.",
-    usage: "",
-    aliases: [],
+    usage: "s!resume",
+    aliases: ["rs"],
   },
 
   run: async function (client, message, args) {

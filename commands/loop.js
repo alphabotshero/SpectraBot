@@ -5,7 +5,7 @@ module.exports = {
   info: {
     name: "loop",
     description: "Enables/Disables the loop.",
-    usage: "",
+    usage: "s!loop",
     aliases: ["lp"],
   },
 

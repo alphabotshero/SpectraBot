@@ -2,7 +2,7 @@ module.exports = {
     info: {
         name: "leave",
         description: "Leaves a voice chat.",
-        usage: "",
+        usage: "s!leave",
         aliases: ["l","dc","disconnect"]
     },
     run: async (client, message, args) => {
@@ -25,7 +25,7 @@ module.exports = {
         message.channel.send ({
             embed: {
                 color: '#58b9ff',
-                description: `Left **${message.member.voice.channel.name}** channel.Use __s!join__ to summon again.`
+                description: `Left **${message.member.voice.channel.name}** channel. Use __s!join__ to summon again.`
             }
         })
     },

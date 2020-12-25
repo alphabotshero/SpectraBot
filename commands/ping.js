@@ -6,7 +6,7 @@ module.exports = {
   info: {
     name: "ping",
     description: "Displays bots latency.",
-    usage: "",
+    usage: "s!ping",
     aliases: [""],
   },
 

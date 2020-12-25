@@ -5,8 +5,8 @@ module.exports = {
   info: {
     name: "pause",
     description: "Pauses the player.",
-    usage: "",
-    aliases: ["pause"],
+    usage: "s!pause",
+    aliases: ["ps"],
   },
 
   run: async function (client, message, args) {

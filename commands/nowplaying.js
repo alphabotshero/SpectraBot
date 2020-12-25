@@ -5,7 +5,7 @@ module.exports = {
   info: {
     name: "nowplaying",
     description: "Displays the current track information.",
-    usage: "",
+    usage: "s!nowplaying",
     aliases: ["np"],
   },
 

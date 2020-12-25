@@ -1,16 +1,16 @@
-require("dotenv").config();//Loading .env
+require("dotenv").config();
 const fs = require("fs");
 const { Collection, Client } = require("discord.js");
 
-const client = new Client();//Making a discord bot client
-client.commands = new Collection();//Making client.commands as a Discord.js Collection
+const client = new Client();
+client.commands = new Collection();
 client.queue = new Map()
 
 client.config = {
   prefix: process.env.PREFIX
 }
 
-//Loading Events
+
 fs.readdir(__dirname + "/events/", (err, files) => {
   if (err) return console.error(err);
   files.forEach((file) => {
@@ -21,7 +21,7 @@ fs.readdir(__dirname + "/events/", (err, files) => {
   });
 });
 
-//Loading Commands
+
 fs.readdir("./commands/", (err, files) => {
   if (err) return console.error(err);
   files.forEach((file) => {
@@ -33,5 +33,5 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-//Logging in to discord
+
 client.login(process.env.TOKEN)

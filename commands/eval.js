@@ -4,7 +4,7 @@ module.exports = {
 	info: {
 	  name: "Evaluate",
 	  description: "Evaluates the code.",
-	  usage: "",
+	  usage: "s!eval 2+2",
 	  aliases: ["eval", "jsk"]
 	},
   

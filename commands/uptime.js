@@ -6,7 +6,7 @@ module.exports = {
   info: {
     name: "uptime",
     description: "shows the bots uptime.",
-    usage: "",
+    usage: "s!uptime",
     aliases: ["up"],
   },
 

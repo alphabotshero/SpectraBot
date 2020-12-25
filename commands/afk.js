@@ -7,7 +7,7 @@ module.exports = {
   info: {
     name: "afk",
     description: "Keeps the bot 24/7 in a Vc",
-    usage: "",
+    usage: "s!afk",
     aliases: ["stay","24/7"],
   },
 

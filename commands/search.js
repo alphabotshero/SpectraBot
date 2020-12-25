@@ -19,22 +19,22 @@ module.exports = {
     if (!channel)return sendError("I'm sorry but you need to be in a voice channel to play music!", message.channel);
 
     const permissions = channel.permissionsFor(message.client.user);
-    if (!permissions.has("CONNECT"))return sendError("I cannot connect to your voice channel, make sure I have the proper permissions!", message.channel);
-    if (!permissions.has("SPEAK"))return sendError("I cannot speak in this voice channel, make sure I have the proper permissions!", message.channel);
+    if (!permissions.has("CONNECT"))return sendError("Error! check my permissions and try again", message.channel);
+    if (!permissions.has("SPEAK"))return sendError("Error! check my permissions and try again", message.channel);
 
     var searchString = args.join(" ");
-    if (!searchString)return sendError("You didn't poivide want i want to search", message.channel);
+    if (!searchString)return sendError("Enter a Valid Query to Search.", message.channel);
 
     var serverQueue = message.client.queue.get(message.guild.id);
     try {
            var searched = await YouTube.search(searchString, { limit: 10 });
-          if (searched[0] == undefined)return sendError("Looks like i was unable to find the song on YouTube", message.channel);
+          if (searched[0] == undefined)return sendError("Looks like i was unable to find the song.", message.channel);
                     let index = 0;
                     let embedPlay = new MessageEmbed()
-                        .setColor("#2C2F33")
+                        .setColor("#58b9ff")
                         .setAuthor(`Results for \"${args.join(" ")}\"`, message.author.displayAvatarURL())
                         .setDescription(`${searched.map(video2 => `**\`${++index}\`  |** [\`${video2.title}\`](${video2.url}) - \`${video2.durationFormatted}\``).join("\n")}`)
-                        .setFooter("Type the number of the song to add it to the playlist");
+                        .setFooter("Enter the track number to add it to the Queue");
                     // eslint-disable-next-line max-depth
                     message.channel.send(embedPlay).then(m => m.delete({
                         timeout: 15000
@@ -50,7 +50,7 @@ module.exports = {
                         return message.channel.send({
                             embed: {
                                 color: "RED",
-                                description: "Nothing has been selected within 20 seconds, the request has been canceled."
+                                description: "Timeout! Nothing has been selected for the past 20s try again later."
                             }
                         });
                     }
@@ -62,7 +62,7 @@ module.exports = {
                     return message.channel.send({
                         embed: {
                             color: "RED",
-                            description: "Iam unable to find results for the query"
+                            description: "No Results found for the Query."
                         }
                     });
                 }
@@ -116,7 +116,7 @@ module.exports = {
     if (!song){
       if (!online.afk) {
         sendError("Leaving the voice channel because I think there are no songs in the queue.", message.channel)
-        message.guild.me.voice.channel.leave();//If you want your bot stay in vc 24/7 remove this line :D
+        message.guild.me.voice.channel.leave();
         message.client.queue.delete(message.guild.id);
       }
             return message.client.queue.delete(message.guild.id);
