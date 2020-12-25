@@ -14,7 +14,7 @@ module.exports = {
             client.guilds.cache.forEach((guild) => {
                 reply += `\`\`\`\nGuild Name = ${guild.name}, Guild members = ${guild.members.cache.size}\`\`\`` })
                 const embed = new Discord.MessageEmbed()
-                .setColor("#000000")
+                .setColor("#2c2f33")
                 embed.setDescription(reply)
                 message.channel.send(embed)
             }

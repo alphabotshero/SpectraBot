@@ -13,7 +13,7 @@ module.exports = {
     if (!args.length || isNaN(args[0]))
       return message.channel.send({
                         embed: {
-                            color: "#2C2F33",
+                            color: "RED",
                             description: `**Usage**: \`${client.config.prefix}skipto <number>\``
                         }
    

@@ -33,8 +33,8 @@ module.exports = {
 				if (!playlist) return sendError("Playlist not found", message.channel)
 				const videos = await playlist.items;
 				for (const video of videos) {
-					// eslint-disable-line no-await-in-loop
-					await handleVideo(video, message, channel, true); // eslint-disable-line no-await-in-loop
+
+					await handleVideo(video, message, channel, true); 
 				}
 				return message.channel.send({
 					embed: {
@@ -56,8 +56,8 @@ module.exports = {
 				const playlist = await ytpl(listurl)
 				const videos = await playlist.items;
 				for (const video of videos) {
-					// eslint-disable-line no-await-in-loop
-					await handleVideo(video, message, channel, true); // eslint-disable-line no-await-in-loop
+
+					await handleVideo(video, message, channel, true); 
 				}
 				let thing = new MessageEmbed()
 					.setAuthor("Playlist has been added to queue")
@@ -131,7 +131,7 @@ async	function play(guild, song) {
     if (!song){
       if (!online.afk) {
         sendError("Leaving the voice channel because I think there are no songs in the queue.", message.channel)
-        message.guild.me.voice.channel.leave();//If you want your bot stay in vc 24/7 remove this line :D
+        message.guild.me.voice.channel.leave();
         message.client.queue.delete(message.guild.id);
       }
             return message.client.queue.delete(message.guild.id);
